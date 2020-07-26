@@ -1,0 +1,57 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="ovly.fiori_24.cadastro_de_alunos.controller.Detalhe">
+	<App>
+		<pages>
+			<Page title="Aluno 10" showNavButton="true" navButtonPress="onNavBack">
+				<content>
+					<ObjectHeader xmlns="sap.m" intro="{Id}" title="{ path:'FirstName', formatter: '.toUpper' } {LastName}" id="header0">
+						<attributes>
+							<ObjectAttribute title="Nascimento" text="{path: 'BirthDate', type: 'sap.ui.model.type.DateTime', formatOptions: { UTC: true } }"/>
+							<ObjectAttribute text="{UserName}" title="Usuário"/>
+						</attributes>
+					</ObjectHeader>
+					<Panel xmlns="sap.m" width="auto" expandable="true" expanded="true" id="panel0">
+						<headerToolbar>
+							<Toolbar id="toolbar2">
+								<Title text="{i18n>adminData}"/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<core:Fragment xmlns:core="sap.ui.core" fragmentName="ovly.fiori_24.cadastro_de_alunos.view.Detalhe_Form" type="XML" id="form0"/>
+						</content>
+					</Panel>
+					<Panel xmlns="sap.m" width="auto" expandable="true" expanded="true" id="panel1">
+						<headerToolbar>
+							<Toolbar id="toolbar3">
+								<Title text="{i18n>skills}"/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<List noDataText="Drop list items here" id="list0">
+								<items>
+									<StandardListItem type="Navigation" title="List Item 1" description="Description text" icon="sap-icon://picture" id="item0"/>
+								</items>
+							</List>
+						</content>
+					</Panel>
+				</content>
+				<footer>
+					<Toolbar width="100%" id="toolbar1">
+						<content>
+							<HBox width="100%" id="hbox0">
+								<items>
+									<Button xmlns="sap.m" text="Deletar" id="button0" icon="sap-icon://delete" type="Reject"/>
+								</items>
+							</HBox>
+							<HBox width="100%" id="hbox2" alignItems="Inherit" alignContent="End" direction="RowReverse">
+								<items>
+									<Button xmlns="sap.m" text="Editar" id="button1" icon="sap-icon://edit" type="Accept"/>
+								</items>
+							</HBox>
+						</content>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
